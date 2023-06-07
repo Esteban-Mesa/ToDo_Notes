@@ -1,0 +1,12 @@
+.todoSearch {
+  text-align: center;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid cornflowerblue;
+  width: 95%;
+  height: 32px;
+}
+
+.todoSearch:focus {
+  outline-color: darkslateblue;
+}

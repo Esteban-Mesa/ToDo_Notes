@@ -1,11 +1,7 @@
-const styleList = {
-  width: "100%",
-  margin: "0px",
-  padding: "0px",
-};
+import "./TodoList.css";
 
 function TodoList(props) {
-  return <ul style={styleList}>{props.children}</ul>;
+  return <ul className="todoList">{props.children}</ul>;
 }
 
 export { TodoList };

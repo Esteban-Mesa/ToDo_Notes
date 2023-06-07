@@ -1,13 +1,7 @@
-const styleButton = {
-  fontSize: "28px",
-  backgroundColor: "#ddfdf6",
-  border: "solid darkslateblue",
-  padding: "8px",
-  borderRadius: "50%",
-};
+import "./createTodoButton.css";
 
 function CreateTodoButton() {
-  return <button style={styleButton}>➕</button>;
+  return <button className="createTodo">➕</button>;
 }
 
 export { CreateTodoButton };

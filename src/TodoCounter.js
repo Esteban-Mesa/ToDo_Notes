@@ -1,12 +1,8 @@
-const styleCounter = {
-  textAlign: "center",
-  paddingBottom: "12px",
-  borderBottom: "4px solid dodgerblue",
-};
+import "./TodoCounter.css";
 
 function TodoCounter({ total, completed }) {
   return (
-    <h1 style={styleCounter}>
+    <h1 className="todoCounter">
       Has compltetado <strong>{completed}</strong> de <strong>{total}</strong> TODOS
     </h1>
   );
