@@ -1,0 +1,11 @@
+.App {
+  color: brown;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
