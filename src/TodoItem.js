@@ -1,9 +1,9 @@
 import "./TodoItem.css";
 
-function TodoItem() {
+function TodoItem({ completed, text }) {
   return (
-    <li className="todoItem">
-      <p>Llorar con la Llorona</p>
+    <li className={`todoItem ${completed ? "todoItem--complited" : ""}`}>
+      <p>{text}</p>
       <div className="todoItem__butonContainer">
         <samp className="todoItem__bouton">✔️</samp>
         <samp className="todoItem__bouton">❌</samp>

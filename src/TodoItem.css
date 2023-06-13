@@ -11,6 +11,11 @@
   margin: 12px 0px;
 }
 
+.todoItem--complited {
+  text-decoration: line-through;
+  background-color: rgb(170, 189, 185);
+}
+
 .todoItem__butonContainer {
   display: flex;
   flex-direction: column;
