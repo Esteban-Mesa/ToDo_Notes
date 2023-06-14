@@ -19,13 +19,31 @@ function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState("");
   console.log("comunicasion exitosa");
-  //derivate
+  // derivate props
   const complitedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
 
   const searchTodos = todos.filter((todo) => {
-    return todo.text.toLocaleLowerCase().includes(searchValue);
+    const todoText = todo.text.toLocaleLowerCase();
+    const searchText = searchValue.toLocaleLowerCase();
+
+    return todoText.includes(searchText);
   });
+
+  // functions
+  const completedTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
 
   return (
     <>
@@ -34,7 +52,13 @@ function App() {
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
         <TodoList>
           {searchTodos.map((todo) => (
-            <TodoItem text={todo.text} completed={todo.completed} />
+            <TodoItem
+              key={todo.text}
+              text={todo.text}
+              completed={todo.completed}
+              onComplite={() => completedTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
+            />
           ))}
         </TodoList>
 
