@@ -21,19 +21,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.todoItem__bouton {
-  background-color: rgb(193, 191, 255);
-  padding: 6px;
-  border-radius: 50%;
-  margin: 6px;
-}
-
-.todoItem__bouton:hover {
-  background-color: rgb(255, 251, 179);
-  cursor: pointer;
-}
-
-.todoItem__bouton:active {
-  background-color: rgb(224, 221, 180);
-}

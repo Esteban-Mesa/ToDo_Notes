@@ -1,0 +1,29 @@
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(193, 191, 255);
+  padding: 6px;
+  border-radius: 50%;
+  margin: 6px;
+}
+
+.button:hover {
+  background-color: rgb(255, 251, 179);
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: rgb(224, 221, 180);
+}
+
+.button__icon {
+  width: 30px;
+}
+
+.button-check:hover {
+  fill: brown;
+}
+
+.button-delete:hover {
+  fill: brown;
+}

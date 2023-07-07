@@ -19,7 +19,8 @@ function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState("");
   console.log("comunicasion exitosa");
-  // derivate props
+
+  // derivate states
   const complitedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
 
