@@ -20,19 +20,34 @@ localStorage.setItem("TODOS-SAVE_V1", JSON.stringify(defaultTodos));
 localStorage.removeItem("TODOS-SAVE_V1");
  */
 
-function App() {
-  const localTodos = localStorage.getItem("TODOS-SAVE_V1");
+function useLocalStorage(itemKey, initialValue) {
+  const itemNames = {
+    todos: "TODOS-SAVE_V1",
+  };
 
-  let parsedTodos;
+  const localItem = localStorage.getItem(itemNames[itemKey]);
 
-  if (!localTodos) {
-    localStorage.setItem("TODOS-SAVE_V1", JSON.stringify([]));
-    parsedTodos = [];
+  let parsedItem;
+
+  if (!localItem) {
+    localStorage.setItem(itemNames[itemKey], JSON.stringify([]));
+    parsedItem = initialValue;
   } else {
-    parsedTodos = JSON.parse(localStorage.getItem("TODOS-SAVE_V1"));
+    parsedItem = JSON.parse(localStorage.getItem(itemNames[itemKey]));
   }
 
-  const [todos, setTodos] = React.useState(parsedTodos);
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemNames[itemKey], JSON.stringify(newItem));
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+}
+
+function App() {
+  const [todos, saveTodos] = useLocalStorage("todos", []);
   const [searchValue, setSearchValue] = React.useState("");
 
   // derivate states
@@ -47,11 +62,6 @@ function App() {
   });
 
   // functions
-  const saveTodos = (newTodos) => {
-    localStorage.setItem("TODOS-SAVE_V1", JSON.stringify(newTodos));
-    setTodos(newTodos);
-  };
-
   const completedTodo = (text) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex((todo) => todo.text === text);
