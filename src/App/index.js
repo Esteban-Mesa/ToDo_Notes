@@ -17,7 +17,7 @@ localStorage.removeItem("TODOS-SAVE_V1");
  */
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage("todos", []);
+  const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage("todos", []);
   const [searchValue, setSearchValue] = React.useState("");
 
   // derivate states
@@ -48,6 +48,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       complitedTodos={complitedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}
