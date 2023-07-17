@@ -1,0 +1,36 @@
+.Loading-container {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.sms {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.loading-anim {
+  position: relative;
+  animation-name: lopLeters;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lopLeters {
+  from {
+    top: 0px;
+  }
+
+  50% {
+    top: -5px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
