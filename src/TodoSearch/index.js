@@ -1,22 +1,19 @@
 import React from "react";
 import "./TodoSearch.css";
+import { TodoContex } from "../Contexs/TodoContex";
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch() {
+  const { searchValue, setSearchValue } = React.useContext(TodoContex);
   return (
     <input
       onChange={(event) => {
         setSearchValue(event.target.value);
-        change(event);
       }}
       value={searchValue}
       className="todoSearch"
       placeholder="Cortar cebolla"
     ></input>
   );
-}
-
-function change(eve) {
-  console.log(`esta escrito: [${eve.target.value}]`);
 }
 
 export { TodoSearch };

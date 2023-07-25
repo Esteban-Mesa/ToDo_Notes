@@ -1,5 +1,17 @@
 import React from "react";
+/* const defaultTodos = [
+  { text: "Cortar cebolla", completed: true },
+  { text: "Tomar el Curso de Intro a React.js", completed: false },
+  { text: "Llorar con la Llorona", completed: true },
+  { text: "LALALALALA", completed: false },
+  { text: "Usar estados derivados", completed: true },
+  { text: "Canción para la vida", completed: false },
+];
 
+localStorage.setItem("TODOS-SAVE_V1", JSON.stringify(defaultTodos));
+
+localStorage.removeItem("TODOS-SAVE_V1");
+ */
 function useLocalStorage(itemKey, initialValue) {
   const itemNames = {
     todos: "TODOS-SAVE_V1",
