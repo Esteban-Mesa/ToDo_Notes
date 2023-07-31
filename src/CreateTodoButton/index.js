@@ -1,24 +1,20 @@
+import React from "react";
 import "./createTodoButton.css";
+import { TodoContex } from "../Contexs/TodoContex";
 
 function CreateTodoButton() {
+  const { openModal, setOpenModal } = React.useContext(TodoContex);
+
   return (
     <button
       className="createTodo"
-      onClick={(event) => {
-        click(event);
+      onClick={() => {
+        setOpenModal(!openModal);
       }}
     >
       ➕
     </button>
   );
-}
-
-function click(thisEvent) {
-  console.log(
-    `evento: ${thisEvent}
-    target: ${thisEvent.target}`,
-  );
-  console.log(thisEvent);
 }
 
 export { CreateTodoButton };
