@@ -1,21 +1,24 @@
-import { TodoCounter } from "../TodoCounter";
-import { TodoSearch } from "../TodoSearch";
-import { TodoList } from "../TodoList";
+import { TodoCounter } from "../TodoCounter/TodoCounter";
+import { TodoSearch } from "../TodoSearch/TodoSearch";
+import { TodoList } from "../TodoList/TodoList";
 import { TodoItem } from "../TodoList/TodoItem";
-import { CreateTodoButton } from "../CreateTodoButton";
-import { CreatorTodos } from "../CreateTodoButton/CreatorTodos";
+import { CreateTodoButton } from "../CreateTodo/CreateTodoButton";
+import { CreatorTodos } from "../CreateTodo/CreatorTodos";
 import { LoadingTodos } from "../TodoList/LoadingTodos";
 import { ErrorTodos } from "../TodoList/ErrorTodos";
 import { EmptyTodos } from "../TodoList/EmptyTodos";
 import { Modal } from "./Modal";
-import { TodoContex, TodoProvider } from "../Contexs/TodoContex";
+import {
+  TodoContex,
+  TodoProvider,
+} from "../Contexs/TodoContex";
 import "./app.css";
 
 function AppUI() {
   return (
     <>
       <TodoProvider>
-        <div className="App">
+        <div className='App'>
           <TodoCounter />
           <TodoSearch />
 
@@ -34,14 +37,18 @@ function AppUI() {
                 <TodoList>
                   {loading ? <LoadingTodos /> : null}
                   {error ? <ErrorTodos /> : null}
-                  {totalTodos === 0 && !loading ? <EmptyTodos /> : null}
+                  {totalTodos === 0 && !loading ? (
+                    <EmptyTodos />
+                  ) : null}
 
                   {searchTodos.map((todo) => (
                     <TodoItem
                       key={todo.text}
                       text={todo.text}
                       completed={todo.completed}
-                      onComplite={() => completedTodo(todo.text)}
+                      onComplite={() =>
+                        completedTodo(todo.text)
+                      }
                       onDelete={() => deleteTodo(todo.text)}
                     />
                   ))}
@@ -57,7 +64,8 @@ function AppUI() {
           </TodoContex.Consumer>
           <p>
             {/* borrar eventuralmente */}
-            Como proyecto fina creare esto con estetica de un tablero de misiones rpg en pixel art
+            Como proyecto fina creare esto con estetica de
+            un tablero de misiones rpg en pixel art
           </p>
         </div>
       </TodoProvider>
