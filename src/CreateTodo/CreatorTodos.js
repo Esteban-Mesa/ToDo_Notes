@@ -3,8 +3,10 @@ import { TodoContex } from "../Contexs/TodoContex";
 import "./CreatorTodos.css";
 
 function CreatorTodos() {
-  const { setOpenModal, addTodo } = React.useContext(TodoContex);
-  const [newTodoValue, setNewTodoValue] = React.useState("");
+  const { setOpenModal, addTodo } =
+    React.useContext(TodoContex);
+  const [newTodoValue, setNewTodoValue] =
+    React.useState("");
 
   const closedModal = () => {
     setOpenModal(false);
@@ -22,20 +24,24 @@ function CreatorTodos() {
   };
 
   return (
-    <form className="creator-container" onSubmit={onSubmit}>
-      <label className="label">Escribe un nievo TODO</label>
+    <form className='creator-container' onSubmit={onSubmit}>
+      <label className='label'>Escribe un nievo TODO</label>
       <textarea
-        className="writer"
-        placeholder="Cortar Cebolla para el almuerzo"
+        className='writer'
+        placeholder='Cortar Cebolla para el almuerzo'
         value={newTodoValue}
         onChange={onChange}
+        required
       ></textarea>
 
-      <div className="btn-container">
-        <button className="btn btn--cancel" onClick={closedModal}>
+      <div className='btn-container'>
+        <button
+          className='btn btn--cancel'
+          onClick={closedModal}
+        >
           Cancelar
         </button>
-        <button className="btn btn--create" type="submit">
+        <button className='btn btn--create' type='submit'>
           Crear
         </button>
       </div>

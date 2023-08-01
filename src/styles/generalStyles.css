@@ -1,0 +1,25 @@
+:root {
+  --clair-coffe: #e4d2aa;
+  --shadow-coffe: #a08662;
+  /* corkboard */
+  --corkboard-panel: #bb7547;
+  --corkboard-mark: #5a4e44;
+  --corkboard-mark-light: #796755;
+  --corkboard-mark-shadow: #423934;
+  /* led sign */
+  --led-sign-mark: #141013;
+  --led-sign-off: #3b1725;
+  --led-sign-on: #b4202a;
+  /* post it */
+  --post-it-shadow: #71413b;
+  --post-it-white: #fef3c0;
+  --post-it-pink: #f5a097;
+  --post-it-aquamarine: #92dcba;
+  --post-it-blue: #b9bffb;
+  --post-it-green: #d6f264;
+  --post-it-yellow: #ffd541;
+  --post-it-ink: #141013;
+
+  --check: #59c135;
+  --cancel: #73172d;
+}
