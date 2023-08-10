@@ -1,12 +1,14 @@
+@import url(../styles/generalStyles.css);
+
 .todoSearch {
   text-align: center;
   font-size: 18px;
   border-radius: 12px;
-  border: 2px solid cornflowerblue;
-  width: 95%;
-  height: 32px;
+  border: 2px solid var(--corkboard-mark);
+  width: 100%;
+  height: 40px;
 }
 
 .todoSearch:focus {
-  outline-color: darkslateblue;
+  outline-color: var(--led-sign-on);
 }

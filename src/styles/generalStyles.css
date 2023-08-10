@@ -23,3 +23,18 @@
   --check: #59c135;
   --cancel: #73172d;
 }
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.shadow-wall {
+  box-shadow: -4px 4px 0px var(--shadow-coffe);
+}
+.shadow-corkboard {
+  box-shadow: -4px 4px 0px var(--post-it-shadow);
+}
+
+.full-w {
+  width: 100%;
+}

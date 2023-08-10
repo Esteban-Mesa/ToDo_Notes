@@ -16,60 +16,61 @@ import "./app.css";
 
 function AppUI() {
   return (
-    <>
-      <TodoProvider>
+    <TodoProvider>
+      <>
         <div className='App'>
           <TodoCounter />
-          <TodoSearch />
-
-          <TodoContex.Consumer>
-            {({
-              loading,
-              error,
-              totalTodos,
-              searchTodos,
-              completedTodo,
-              deleteTodo,
-              openModal,
-              setOpenModal,
-            }) => (
-              <>
-                <TodoList>
+          <div className='corkboard'>
+            <TodoSearch />
+            <TodoContex.Consumer>
+              {({
+                loading,
+                error,
+                totalTodos,
+                searchTodos,
+                completedTodo,
+                deleteTodo,
+                openModal,
+                setOpenModal,
+              }) => (
+                <>
                   {loading ? <LoadingTodos /> : null}
                   {error ? <ErrorTodos /> : null}
                   {totalTodos === 0 && !loading ? (
                     <EmptyTodos />
                   ) : null}
 
-                  {searchTodos.map((todo) => (
-                    <TodoItem
-                      key={todo.text}
-                      text={todo.text}
-                      completed={todo.completed}
-                      onComplite={() =>
-                        completedTodo(todo.text)
-                      }
-                      onDelete={() => deleteTodo(todo.text)}
-                    />
-                  ))}
-                </TodoList>
-                <CreateTodoButton />
-                {openModal ? (
-                  <Modal>
-                    Agregar Todos <CreatorTodos />
-                  </Modal>
-                ) : null}
-              </>
-            )}
-          </TodoContex.Consumer>
-          <p>
-            {/* borrar eventuralmente */}
-            Como proyecto fina creare esto con estetica de
-            un tablero de misiones rpg en pixel art
-          </p>
+                  <div className='scroll-y full-w'>
+                    <TodoList>
+                      {searchTodos.map((todo) => (
+                        <TodoItem
+                          key={todo.text}
+                          text={todo.text}
+                          completed={todo.completed}
+                          onComplite={() =>
+                            completedTodo(todo.text)
+                          }
+                          onDelete={() =>
+                            deleteTodo(todo.text)
+                          }
+                        />
+                      ))}
+                    </TodoList>
+                  </div>
+
+                  {openModal ? (
+                    <Modal>
+                      Agregar Todos <CreatorTodos />
+                    </Modal>
+                  ) : null}
+                </>
+              )}
+            </TodoContex.Consumer>
+          </div>
+          <CreateTodoButton />
         </div>
-      </TodoProvider>
-    </>
+      </>
+    </TodoProvider>
   );
 }
 

@@ -1,11 +1,20 @@
+@import url(../styles/generalStyles.css);
+
 .App {
-  color: rgb(30, 30, 206);
-  width: 500px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  align-items: center;
+  padding: 20px;
+}
+
+.corkboard {
+  background-color: var(--corkboard-panel);
+  border: solid var(--corkboard-mark) 12px;
+  padding: 8px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: aquamarine;
-  margin: 80px auto;
-  padding: 28px;
-  border-radius: 20px;
+  overflow-x: scroll;
 }
