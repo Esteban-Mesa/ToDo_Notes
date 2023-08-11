@@ -1,0 +1,12 @@
+@import url(../styles/generalStyles.css);
+
+.select-color {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 3px var(--corkboard-mark-light);
+}
+
+.selected {
+  border: solid 3px var(--led-sign-mark);
+}

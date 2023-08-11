@@ -19,9 +19,13 @@
 }
 
 .colors-container {
+  height: 100px;
+  margin: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
 }
 
 .btn-container {
@@ -32,6 +36,7 @@
 .writer {
   height: 50%;
   padding: 10px;
+  margin-top: 20px;
   font-size: 20px;
   text-align: center;
   border: none;
