@@ -38,9 +38,7 @@ function CreatorTodos() {
   };
 
   const changeColor = (eve) => {
-    const newColor =
-      eve.target.__reactProps$bs78r3g20c5.style
-        .backgroundColor;
+    const newColor = eve.target.id;
 
     setCurrentColor(newColor);
   };
@@ -59,42 +57,42 @@ function CreatorTodos() {
 
       <div className='colors-container'>
         <SelectColor
-          thisColor={PostItColor.white}
+          idColor={PostItColor.white}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);
           }}
         />
         <SelectColor
-          thisColor={PostItColor.pink}
+          idColor={PostItColor.pink}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);
           }}
         />
         <SelectColor
-          thisColor={PostItColor.aquamarine}
+          idColor={PostItColor.aquamarine}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);
           }}
         />
         <SelectColor
-          thisColor={PostItColor.blue}
+          idColor={PostItColor.blue}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);
           }}
         />
         <SelectColor
-          thisColor={PostItColor.green}
+          idColor={PostItColor.green}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);
           }}
         />
         <SelectColor
-          thisColor={PostItColor.yellow}
+          idColor={PostItColor.yellow}
           itIsCurrentColor={currentColor}
           OnThisClick={(event) => {
             changeColor(event);

@@ -2,16 +2,17 @@ import React from "react";
 import "./SelectColor.css";
 
 function SelectColor({
-  thisColor,
+  idColor,
   itIsCurrentColor,
   OnThisClick,
 }) {
   return (
     <div
+      id={idColor}
       onClick={OnThisClick}
-      style={{ backgroundColor: thisColor }}
+      style={{ backgroundColor: idColor }}
       className={`select-color shadow-corkboard ${
-        itIsCurrentColor === thisColor ? "selected" : null
+        itIsCurrentColor === idColor ? "selected" : null
       }`}
     ></div>
   );
