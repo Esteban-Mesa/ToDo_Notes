@@ -1,8 +1,14 @@
 import React from "react";
 import { AppUI } from "./AppUI";
 
+import { TodoProvider } from "../Contexs/TodoContex";
+
 function App() {
-  return <AppUI />;
+  return (
+    <TodoProvider>
+      <AppUI />
+    </TodoProvider>
+  );
 }
 
 export default App;
