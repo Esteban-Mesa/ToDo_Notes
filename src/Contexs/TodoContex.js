@@ -20,9 +20,9 @@ function TodoProvider({ children }) {
   });
 
   // functions
-  const addTodo = (text) => {
+  const addTodo = (text, color) => {
     const newTodos = [...todos];
-    newTodos.push({ text, complited: false });
+    newTodos.push({ text, complited: false, color });
     saveTodos(newTodos);
   };
 

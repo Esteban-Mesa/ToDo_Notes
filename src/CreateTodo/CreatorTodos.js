@@ -16,12 +16,12 @@ function CreatorTodos() {
   const { setOpenModal, addTodo } =
     React.useContext(TodoContex);
 
+  const [newTodoValue, setNewTodoValue] =
+    React.useState("");
+
   const [currentColor, setCurrentColor] = React.useState(
     PostItColor.white,
   );
-
-  const [newTodoValue, setNewTodoValue] =
-    React.useState("");
 
   const closedModal = () => {
     setOpenModal(false);
@@ -30,7 +30,7 @@ function CreatorTodos() {
   const onSubmit = (event) => {
     event.preventDefault();
     setOpenModal(false);
-    addTodo(newTodoValue);
+    addTodo(newTodoValue, currentColor);
   };
 
   const onChange = (event) => {

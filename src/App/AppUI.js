@@ -43,6 +43,7 @@ function AppUI() {
                   key={todo.text}
                   text={todo.text}
                   completed={todo.completed}
+                  color={todo.color}
                   onComplite={() =>
                     completedTodo(todo.text)
                   }

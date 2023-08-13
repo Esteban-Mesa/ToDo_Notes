@@ -1,11 +1,11 @@
 import React from "react";
 /* const defaultTodos = [
-  { text: "Cortar cebolla", completed: true },
-  { text: "Tomar el Curso de Intro a React.js", completed: false },
-  { text: "Llorar con la Llorona", completed: true },
-  { text: "LALALALALA", completed: false },
-  { text: "Usar estados derivados", completed: true },
-  { text: "Canción para la vida", completed: false },
+  { text: "Cortar cebolla", completed: true, color:"#fef3c0"},
+  { text: "Tomar el Curso de Intro a React.js", completed: false, color:"#fef3c0" },
+  { text: "Llorar con la Llorona", completed: true, color:"#fef3c0" },
+  { text: "LALALALALA", completed: false, color:"#fef3c0" },
+  { text: "Usar estados derivados", completed: true, color:"#fef3c0" },
+  { text: "Canción para la vida", completed: false, color:"#fef3c0" },
 ];
 
 localStorage.setItem("TODOS-SAVE_V1", JSON.stringify(defaultTodos));
