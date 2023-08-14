@@ -1,24 +1,35 @@
-import { DeleteIcon } from "../TodoIcon/DeleteIcon";
-import { CompleteIcon } from "../TodoIcon/CompleteIcon";
+import {
+  AiOutlineCheckCircle,
+  AiOutlineCloseCircle,
+  AiOutlineReload,
+} from "react-icons/ai";
 import "./TodoItem.css";
 
 function TodoItem(props) {
-  console.log(props.color);
-
   return (
     <li
       style={{ backgroundColor: props.color }}
       className={`todoItem ${
-        props.completed ? "todoItem--complited" : ""
+        props.completed ? "todoItem--complited" : null
       }`}
     >
       <p>{props.text}</p>
       <div className='todoItem__butonContainer'>
-        <div onClick={props.onComplite}>
-          <CompleteIcon completed={props.completed} />
+        <div
+          onClick={props.onComplite}
+          className='todoItem__buton todoItem__buton--check'
+        >
+          {props.completed ? (
+            <AiOutlineReload />
+          ) : (
+            <AiOutlineCheckCircle />
+          )}
         </div>
-        <div onClick={props.onDelete}>
-          <DeleteIcon completed={props.completed} />
+        <div
+          onClick={props.onDelete}
+          className='todoItem__buton todoItem__buton--detele'
+        >
+          <AiOutlineCloseCircle />
         </div>
       </div>
     </li>

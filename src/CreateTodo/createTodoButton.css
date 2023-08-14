@@ -1,15 +1,7 @@
 .createTodo {
-  font-size: 28px;
-  background-color: rgb(221, 253, 246);
-  border: solid darkslateblue;
-  padding: 8px;
-  border-radius: 50%;
+  border: none;
 }
-.createTodo:hover {
-  background-color: rgb(255, 253, 208);
-  border: solid rgb(165, 79, 175);
-}
-.createTodo:active {
-  background-color: rgb(224, 221, 180);
-  border: solid rgb(76, 32, 81);
+
+.icon {
+  font-size: 32px;
 }

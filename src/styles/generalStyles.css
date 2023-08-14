@@ -29,7 +29,7 @@
 }
 
 .shadow-wall {
-  box-shadow: -4px 4px 0px var(--shadow-coffe);
+  box-shadow: -6px 6px 0px var(--shadow-coffe);
 }
 .shadow-corkboard {
   box-shadow: -4px 4px 0px var(--post-it-shadow);
@@ -37,4 +37,14 @@
 
 .full-w {
   width: 100%;
+}
+
+.panel-led {
+  color: var(--led-sign-on);
+  background-color: var(--led-sign-off);
+  border: solid 6px var(--led-sign-mark);
+  padding: 6px;
+}
+.panel-led:active {
+  color: var(--check);
 }

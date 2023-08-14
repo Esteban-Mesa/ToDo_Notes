@@ -6,17 +6,28 @@
   text-align: center;
   font-weight: 600;
   font-size: 16px;
-  background-color: rgb(221, 253, 246);
-  padding: 8px;
-  height: 100%;
+  padding: 4px;
+  min-height: 120px;
 }
 
 .todoItem--complited {
   text-decoration: line-through;
-  background-color: rgb(170, 189, 185);
+  filter: brightness(70%);
 }
 
 .todoItem__butonContainer {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.todoItem__buton {
+  font-size: 36px;
+}
+.todoItem__buton--check {
+  color: var(--check);
+}
+.todoItem__buton--detele {
+  color: var(--cancel);
 }
