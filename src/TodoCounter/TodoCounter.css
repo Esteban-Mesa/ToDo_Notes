@@ -2,11 +2,11 @@
 
 .todoCounter {
   color: var(--led-sign-on);
-  font-family: "Handjet", cursive;
-  font-weight: 300;
-  font-size: 36px;
+  font-family: "Tektur", cursive;
+  font-size: 28px;
   text-align: center;
 
   background-color: var(--led-sign-off);
-  border: solid var(--led-sign-mark) 8px;
+  border: solid 6px var(--led-sign-mark);
+  padding: 4px;
 }

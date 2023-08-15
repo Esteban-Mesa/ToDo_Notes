@@ -22,6 +22,16 @@
 
   --check: #59c135;
   --cancel: #73172d;
+
+  --main-btn-color: #328464;
+  --main-btn-shadow: #23674e;
+  --main-btn-light: #5daf8d;
+  --main-btn-icon: #d6f264;
+
+  --second-btn-color: #8e5252;
+  --second-btn-shadow: #5b3138;
+  --second-btn-light: #ba756a;
+  --second-btn-icon: #e9b5a3;
 }
 
 .scroll-y {
@@ -39,12 +49,20 @@
   width: 100%;
 }
 
-.panel-led {
-  color: var(--led-sign-on);
-  background-color: var(--led-sign-off);
-  border: solid 6px var(--led-sign-mark);
-  padding: 6px;
+.main-btn {
+  color: var(--main-btn-icon);
+  background-color: var(--main-btn-color);
+  border: solid 4px;
+  border-top-color: var(--main-btn-light);
+  border-right-color: var(--main-btn-light);
+  border-bottom-color: var(--main-btn-shadow);
+  border-left-color: var(--main-btn-shadow);
+  padding: 8px;
+
+  display: grid;
+  place-items: center;
 }
-.panel-led:active {
-  color: var(--check);
+.main-btn:active {
+  border: none;
+  box-shadow: inset -4px 4px 0px var(--main-btn-shadow);
 }

@@ -1,9 +1,10 @@
+import React from "react";
 import { TodoContex } from "../Contexs/TodoContex";
 import "./TodoCounter.css";
-import React from "react";
 
 function TodoCounter() {
-  const { totalTodos, complitedTodos } = React.useContext(TodoContex);
+  const { totalTodos, complitedTodos } =
+    React.useContext(TodoContex);
   const text = () => {
     if (totalTodos === 0) {
       return `No hay tareas, ¡agrega algunas!`;
@@ -16,7 +17,9 @@ function TodoCounter() {
     return `Has compltetado ${complitedTodos} de ${totalTodos} TODOS`;
   };
 
-  return <h1 className="todoCounter">{text()}</h1>;
+  return (
+    <h1 className='todoCounter shadow-wall'>{text()}</h1>
+  );
 }
 
 export { TodoCounter };

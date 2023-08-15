@@ -5,10 +5,10 @@ import "./createTodoButton.css";
 function CreateTodoButton({ open }) {
   return (
     <button
-      className='createTodo panel-led shadow-wall'
+      className='createTodo main-btn shadow-wall'
       onClick={open}
     >
-      <BsPencilFill className='icon' />
+      <BsPencilFill />
     </button>
   );
 }

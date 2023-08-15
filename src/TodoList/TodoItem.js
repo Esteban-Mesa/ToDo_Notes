@@ -10,8 +10,10 @@ function TodoItem(props) {
     <li
       style={{ backgroundColor: props.color }}
       className={`todoItem ${
-        props.completed ? "todoItem--complited" : null
-      }`}
+        props.completed
+          ? "todoItem--complited"
+          : "shadow-corkboard"
+      } `}
     >
       <p>{props.text}</p>
       <div className='todoItem__butonContainer'>

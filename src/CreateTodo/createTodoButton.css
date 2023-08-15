@@ -1,7 +1,7 @@
-.createTodo {
-  border: none;
-}
+@import url(../styles/generalStyles.css);
 
-.icon {
+.createTodo {
+  width: 60px;
+  height: 60px;
   font-size: 32px;
 }

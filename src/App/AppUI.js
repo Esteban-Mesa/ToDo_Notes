@@ -28,7 +28,7 @@ function AppUI() {
     <>
       <div className='App'>
         <TodoCounter />
-        <div className='corkboard'>
+        <div className='corkboard shadow-wall'>
           <TodoSearch />
           {loading ? <LoadingTodos /> : null}
           {error ? <ErrorTodos /> : null}

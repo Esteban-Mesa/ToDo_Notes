@@ -11,7 +11,11 @@
 
 .corkboard {
   background-color: var(--corkboard-panel);
-  border: solid var(--corkboard-mark) 12px;
+  border: solid 12px;
+  border-bottom-color: var(--corkboard-mark);
+  border-left-color: var(--corkboard-mark);
+  border-top-color: var(--corkboard-mark-shadow);
+  border-right-color: var(--corkboard-mark-shadow);
   padding: 8px;
   height: 100%;
   display: flex;
