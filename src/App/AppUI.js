@@ -23,6 +23,7 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
+    chageSeeMode,
   } = React.useContext(TodoContex);
 
   return (
@@ -45,9 +46,7 @@ function AppUI() {
                   text={todo.text}
                   completed={todo.completed}
                   color={todo.color}
-                  onComplite={() =>
-                    completedTodo(todo.text)
-                  }
+                  onComplite={() =>completedTodo(todo.text)}
                   onDelete={() => deleteTodo(todo.text)}
                 />
               ))}
@@ -62,7 +61,7 @@ function AppUI() {
         </div>
 
         <div className='main-btns-container'>
-          <TodoFilter />
+          <TodoFilter changeView={chageSeeMode} />
           <CreateTodoButton
             open={() => {
               setOpenModal(true);

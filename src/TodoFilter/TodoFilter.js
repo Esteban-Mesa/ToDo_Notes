@@ -5,9 +5,10 @@ import {
 } from "react-icons/bs";
 import "./TodoFilter.css";
 
-function TodoFilter(changeView) {
+function TodoFilter({changeView}) {
   return (
-    <button className="second-btn">
+    <button className="second-btn"
+    onClick={changeView}>
       <BsBookFill />
     </button>
   );

@@ -40,6 +40,11 @@ function TodoProvider({ children }) {
     }
   };
 
+  const chageSeeMode = () => {
+    let index = seeStates.indexOf(see);
+    console.log(index);
+  };
+
   const searchTodos = seeTodosMode().filter((todo) => {
     const todoText = todo.text.toLocaleLowerCase();
     const searchText = searchValue.toLocaleLowerCase();
@@ -88,6 +93,7 @@ function TodoProvider({ children }) {
         openModal,
         setOpenModal,
         addTodo,
+        chageSeeMode,
       }}
     >
       {children}
