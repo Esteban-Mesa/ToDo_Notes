@@ -9,7 +9,7 @@ import { LoadingTodos } from "../TodoList/LoadingTodos";
 import { ErrorTodos } from "../TodoList/ErrorTodos";
 import { EmptyTodos } from "../TodoList/EmptyTodos";
 import { Modal } from "./Modal";
-import { TodoFilter } from "../TodoFilter/TodoFilter";
+import { TodoFilter } from "../TodoSeeMode/TodoSeeMode";
 import { TodoContex } from "../Contexs/TodoContex";
 import "./app.css";
 

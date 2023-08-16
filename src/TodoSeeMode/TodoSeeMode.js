@@ -3,12 +3,11 @@ import {
   BsBookHalf,
   BsBook,
 } from "react-icons/bs";
-import "./TodoFilter.css";
+import "./TodoSeeMode.css";
 
-function TodoFilter({changeView}) {
+function TodoFilter({ changeView }) {
   return (
-    <button className="second-btn"
-    onClick={changeView}>
+    <button className='second-btn' onClick={changeView}>
       <BsBookFill />
     </button>
   );
