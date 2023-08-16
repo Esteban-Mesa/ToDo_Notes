@@ -29,20 +29,24 @@ function TodoProvider({ children }) {
 
     if (see === seeStates[1]) {
       return todos.filter(
-        (todo) => todo.completed === true,
+        (todo) => todo.completed === false,
       );
     }
 
     if (see === seeStates[2]) {
       return todos.filter(
-        (todo) => todo.completed === false,
+        (todo) => todo.completed === true,
       );
     }
   };
 
   const chageSeeMode = () => {
-    let index = seeStates.indexOf(see);
-    console.log(index);
+    const limit = seeStates.length;
+    const index = seeStates.indexOf(see);
+
+    let nextIndex = index === limit - 1 ? 0 : index + 1;
+
+    setSee(seeStates[nextIndex]);
   };
 
   const searchTodos = seeTodosMode().filter((todo) => {
