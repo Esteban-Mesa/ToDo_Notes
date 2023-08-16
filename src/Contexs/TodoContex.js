@@ -1,18 +1,46 @@
 import React from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
 
+const seeStates = ["all", "pending", "complete"];
+
 const TodoContex = React.createContext();
 
 function TodoProvider({ children }) {
-  const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage("todos", []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage("todos", []);
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
+  const [see, setSee] = React.useState(seeStates[0]);
 
   // derivate states
-  const complitedTodos = todos.filter((todo) => !!todo.completed).length;
+  const complitedTodos = todos.filter(
+    (todo) => !!todo.completed,
+  ).length;
   const totalTodos = todos.length;
 
-  const searchTodos = todos.filter((todo) => {
+  const seeTodosMode = () => {
+    if (see === seeStates[0]) {
+      return todos;
+    }
+
+    if (see === seeStates[1]) {
+      return todos.filter(
+        (todo) => todo.completed === true,
+      );
+    }
+
+    if (see === seeStates[2]) {
+      return todos.filter(
+        (todo) => todo.completed === false,
+      );
+    }
+  };
+
+  const searchTodos = seeTodosMode().filter((todo) => {
     const todoText = todo.text.toLocaleLowerCase();
     const searchText = searchValue.toLocaleLowerCase();
 
@@ -28,14 +56,19 @@ function TodoProvider({ children }) {
 
   const completedTodo = (text) => {
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
-    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text,
+    );
+    newTodos[todoIndex].completed =
+      !newTodos[todoIndex].completed;
     saveTodos(newTodos);
   };
 
   const deleteTodo = (text) => {
     const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text,
+    );
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };

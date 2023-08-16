@@ -9,6 +9,7 @@ import { LoadingTodos } from "../TodoList/LoadingTodos";
 import { ErrorTodos } from "../TodoList/ErrorTodos";
 import { EmptyTodos } from "../TodoList/EmptyTodos";
 import { Modal } from "./Modal";
+import { TodoFilter } from "../TodoFilter/TodoFilter";
 import { TodoContex } from "../Contexs/TodoContex";
 import "./app.css";
 
@@ -60,11 +61,14 @@ function AppUI() {
           ) : null}
         </div>
 
-        <CreateTodoButton
-          open={() => {
-            setOpenModal(true);
-          }}
-        />
+        <div className='main-btns-container'>
+          <TodoFilter />
+          <CreateTodoButton
+            open={() => {
+              setOpenModal(true);
+            }}
+          />
+        </div>
       </div>
     </>
   );

@@ -66,3 +66,21 @@
   border: none;
   box-shadow: inset -4px 4px 0px var(--main-btn-shadow);
 }
+
+.second-btn {
+  color: var(--second-btn-icon);
+  background-color: var(--second-btn-color);
+  border: solid 4px;
+  border-top-color: var(--second-btn-light);
+  border-right-color: var(--second-btn-light);
+  border-bottom-color: var(--second-btn-shadow);
+  border-left-color: var(--second-btn-shadow);
+  padding: 8px;
+
+  display: grid;
+  place-items: center;
+}
+.second-btn:active {
+  border: none;
+  box-shadow: inset -4px 4px 0px var(--second-btn-shadow);
+}

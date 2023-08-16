@@ -2,28 +2,30 @@
 
 .App {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-  align-items: center;
-  justify-items: center;
-  padding: 20px;
+  padding: 12px;
 }
 
 .corkboard {
+  height: 65vh;
   background-color: var(--corkboard-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
   border: solid 12px;
   border-bottom-color: var(--corkboard-mark);
   border-left-color: var(--corkboard-mark);
   border-top-color: var(--corkboard-mark-shadow);
   border-right-color: var(--corkboard-mark-shadow);
   padding: 8px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
 }
-
 .corkboard::-webkit-scrollbar {
   display: none;
+}
+
+.main-btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
