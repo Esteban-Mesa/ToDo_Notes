@@ -97,6 +97,7 @@ function TodoProvider({ children }) {
         openModal,
         setOpenModal,
         addTodo,
+        see,
         chageSeeMode,
       }}
     >
