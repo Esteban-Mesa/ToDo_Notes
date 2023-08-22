@@ -7,7 +7,7 @@ const TodoContex = React.createContext();
 
 function TodoProvider({ children }) {
   const {
-    item: todos,
+    item,
     saveItem: saveTodos,
     loading,
     error,
@@ -16,7 +16,16 @@ function TodoProvider({ children }) {
   const [openModal, setOpenModal] = React.useState(false);
   const [see, setSee] = React.useState(seeStates[0]);
 
+  const todos = item.map((todo) => {
+    if (todo.key) {
+      return todo;
+    } else {
+      return { key: `${Math.random()}`, ...todo };
+    }
+  });
+
   // derivate states
+
   const complitedTodos = todos.filter(
     (todo) => !!todo.completed,
   ).length;
@@ -63,20 +72,20 @@ function TodoProvider({ children }) {
     saveTodos(newTodos);
   };
 
-  const completedTodo = (text) => {
+  const completedTodo = (key) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(
-      (todo) => todo.text === text,
+      (todo) => todo.key === key,
     );
     newTodos[todoIndex].completed =
       !newTodos[todoIndex].completed;
     saveTodos(newTodos);
   };
 
-  const deleteTodo = (text) => {
+  const deleteTodo = (key) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(
-      (todo) => todo.text === text,
+      (todo) => todo.key === key,
     );
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
