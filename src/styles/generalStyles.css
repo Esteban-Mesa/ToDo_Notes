@@ -58,6 +58,7 @@
   border-bottom-color: var(--main-btn-shadow);
   border-left-color: var(--main-btn-shadow);
   padding: 8px;
+  cursor: pointer;
 
   display: grid;
   place-items: center;
@@ -76,6 +77,7 @@
   border-bottom-color: var(--second-btn-shadow);
   border-left-color: var(--second-btn-shadow);
   padding: 8px;
+  cursor: pointer;
 
   display: grid;
   place-items: center;

@@ -6,6 +6,7 @@
 }
 
 .corkboard {
+  max-width: 1000px;
   height: 65vh;
   background-color: var(--corkboard-panel);
   display: flex;
@@ -17,9 +18,14 @@
   border-left-color: var(--corkboard-mark);
   border-top-color: var(--corkboard-mark-shadow);
   border-right-color: var(--corkboard-mark-shadow);
-  padding: 8px;
+  padding: 8px 8px 0px;
+  margin: 20px auto 20px;
 }
 .corkboard::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-box::-webkit-scrollbar {
   display: none;
 }
 

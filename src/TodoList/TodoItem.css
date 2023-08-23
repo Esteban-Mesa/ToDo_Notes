@@ -25,6 +25,7 @@
 
 .todoItem__buton {
   font-size: 36px;
+  cursor: pointer;
 }
 .todoItem__buton--check {
   color: var(--check);

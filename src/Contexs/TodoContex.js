@@ -68,7 +68,7 @@ function TodoProvider({ children }) {
   // functions
   const addTodo = (text, color) => {
     const newTodos = [...todos];
-    newTodos.push({ text, complited: false, color });
+    newTodos.push({ text, completed: false, color });
     saveTodos(newTodos);
   };
 

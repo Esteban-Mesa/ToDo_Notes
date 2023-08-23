@@ -39,7 +39,7 @@ function AppUI() {
             <EmptyTodos />
           ) : null}
 
-          <div className='scroll-y full-w'>
+          <div className='scroll-box scroll-y full-w'>
             <TodoList>
               {searchTodos.map((todo) => (
                 <TodoItem
