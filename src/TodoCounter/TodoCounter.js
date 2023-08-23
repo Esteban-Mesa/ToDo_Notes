@@ -7,14 +7,14 @@ function TodoCounter() {
     React.useContext(TodoContex);
   const text = () => {
     if (totalTodos === 0) {
-      return `No hay tareas, ¡agrega algunas!`;
+      return `No To-Dos, no notes`;
     }
 
     if (totalTodos === complitedTodos) {
-      return `${complitedTodos} de ${totalTodos}. Todas las fueron tareas completadas 🥳 descansa un poco`;
+      return `${complitedTodos} out of ${totalTodos}, take a break`;
     }
 
-    return `Has compltetado ${complitedTodos} de ${totalTodos} TODOS`;
+    return `You have completed ${complitedTodos} out of ${totalTodos} To-Do notes`;
   };
 
   return (
