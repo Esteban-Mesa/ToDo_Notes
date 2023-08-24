@@ -10,37 +10,61 @@ function LoadingTodos() {
   };
 
   return (
-    <div className="Loading-container center">
-      <span className="sms">
-        <span className="loading-anim">G</span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          a
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          r
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          g
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          a
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          n
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
-          d
-        </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
+    <div className='Loading-container center'>
+      <span className='sms'>
+        <span className='loading-anim'>L</span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
           o
         </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
+          a
+        </span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
+          d
+        </span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
+          i
+        </span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
+          n
+        </span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
+          g
+        </span>
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
           .
         </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
           .
         </span>
-        <span style={{ animationDelay: `${sumDelay()}s` }} className="loading-anim">
+        <span
+          style={{ animationDelay: `${sumDelay()}s` }}
+          className='loading-anim'
+        >
           .
         </span>
       </span>

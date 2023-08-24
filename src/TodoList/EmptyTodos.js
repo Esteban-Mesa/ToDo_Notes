@@ -1,5 +1,5 @@
 function EmptyTodos() {
-  return <p>Todo limpio</p>;
+  return <p>All clear</p>;
 }
 
 export { EmptyTodos };

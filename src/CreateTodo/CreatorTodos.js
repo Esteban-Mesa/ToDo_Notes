@@ -45,11 +45,11 @@ function CreatorTodos() {
 
   return (
     <form className='creator-container' onSubmit={onSubmit}>
-      <label className='label'>Escribe un nievo TODO</label>
+      <label className='label'>Create new To-Do note</label>
       <textarea
         style={{ backgroundColor: currentColor }}
         className='writer shadow-corkboard'
-        placeholder='Cortar Cebolla para el almuerzo'
+        placeholder='Write here'
         value={newTodoValue}
         onChange={onChange}
         required
@@ -106,13 +106,13 @@ function CreatorTodos() {
           type='button'
           onClick={closedModal}
         >
-          Cancelar
+          Cancel
         </button>
         <button
           className='btn btn--create shadow-corkboard'
           type='submit'
         >
-          Crear
+          Create
         </button>
       </div>
     </form>
