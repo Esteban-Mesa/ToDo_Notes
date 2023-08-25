@@ -1,17 +1,5 @@
 import React from "react";
-/* const defaultTodos = [
-  { text: "Cortar cebolla", completed: true, color:"#fef3c0"},
-  { text: "Tomar el Curso de Intro a React.js", completed: false, color:"#fef3c0" },
-  { text: "Llorar con la Llorona", completed: true, color:"#fef3c0" },
-  { text: "LALALALALA", completed: false, color:"#fef3c0" },
-  { text: "Usar estados derivados", completed: true, color:"#fef3c0" },
-  { text: "Canción para la vida", completed: false, color:"#fef3c0" },
-];
 
-localStorage.setItem("TODOS-SAVE_V1", JSON.stringify(defaultTodos));
-
-localStorage.removeItem("TODOS-SAVE_V1");
- */
 function useLocalStorage(itemKey, initialValue) {
   const itemNames = {
     todos: "TODOS-SAVE_V1",
@@ -28,10 +16,10 @@ function useLocalStorage(itemKey, initialValue) {
 
       let parsedItem;
 
-      if (!localItem) {
+      if (localItem == null) {
         localStorage.setItem(
           itemNames[itemKey],
-          JSON.stringify([]),
+          JSON.stringify(initialValue),
         );
         parsedItem = initialValue;
       } else {

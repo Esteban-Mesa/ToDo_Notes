@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
+import { DefaultTodos } from "../TodoList/DefaultTodos.js";
 
 const seeStates = ["all", "pending", "complete"];
 
@@ -11,13 +12,14 @@ function TodoProvider({ children }) {
     saveItem: saveTodos,
     loading,
     error,
-  } = useLocalStorage("todos", []);
+  } = useLocalStorage("todos", DefaultTodos);
+
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
   const [see, setSee] = React.useState(seeStates[0]);
 
   const todos = item.map((todo) => {
-    if (todo.key) {
+    if (todo === null || todo.key) {
       return todo;
     } else {
       return { key: `${Math.random()}`, ...todo };
