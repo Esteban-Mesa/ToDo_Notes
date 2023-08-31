@@ -1,3 +1,18 @@
+# Welcome to ToDo Notes
+This is a web application that allows you to write tasks in the form of post-it notes. It was created following Platzi's [Curso de Introducción a React.js](https://platzi.com/cursos/react/), in which the basic features of this app were developed. The most relevant are:
+- Persistence in memory.
+- search tasks by characters.
+- create new pending tasks.
+- mark tasks as completed.
+- delete tasks.
+
+Features that I have implemented myself:
+- Cork board based styling.
+- Customize the color of each post-it when creating it.
+- Button to show completed tasks, pending tasks, or both at the same time.
+- A series of default notes explaining how to use the app.
+
+---
 # Repositorio base del Curso de Introducción a React.js en Platzi
 
 ¡Hola, Platzinauta!
