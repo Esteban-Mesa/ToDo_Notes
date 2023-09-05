@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillGithub } from "react-icons/ai";
 import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch";
 import { TodoList } from "../TodoList/TodoList";
@@ -72,8 +73,14 @@ function AppUI() {
             }}
           />
         </div>
-        <footer className="footer">
-          Developed by Esteban Mesa <a href=''>repo</a>
+        <footer className='footer'>
+          <span>
+            Developed by Esteban Mesa,{" "}
+            <a href='https://github.com/Esteban-Mesa/ToDo_Notes'>
+              repository on{" "}
+              {<AiFillGithub className='footer--icon' />}
+            </a>
+          </span>
         </footer>
       </div>
     </>
