@@ -72,6 +72,9 @@ function AppUI() {
             }}
           />
         </div>
+        <footer className="footer">
+          Developed by Esteban Mesa <a href=''>repo</a>
+        </footer>
       </div>
     </>
   );
